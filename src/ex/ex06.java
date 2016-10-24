@@ -18,25 +18,47 @@ public class ex06 {
 			data[i] = src.nextInt();
 
 		}
-
-		int a = 0;
-
-		for (int j = 0; j < n; j++) {
-			if (data[j + 1] > data[j]) {
-				a = data[j];
-				
-				data[j] = data[j+1];
-				
-				data[j+1] = a;
-
-			} else {
-				j = n;
+			int max=0;
+			int m=0;	
+			int sum=0;
+			
+		for(int j=0;j<n;j++)
+		{
+			for(int k=0;k<n;k++)
+			{
+				if(data[k]>max)
+				{
+					max=data[k];
+					m=k;
+				}
 			}
-
+			sum=max;
+			data[m]=-1;
+			max=0;
+					m=0;
+					System.out.print(sum);
 		}
-		for (int k = 0; k < n; k++) {
-			System.out.println(data[k]);
-		}
+			
+			
+			
+//		int a = 0;
+//
+//		for (int j = 0; j < n; j++) {
+//			if (data[(j + 1)] > data[j] ) {
+//				a = data[j];
+//				
+//				data[j] = data[(j+1)];
+//				
+//				data[(j+1)] = a;
+//
+//			} else {
+//			j=n;
+//			}
+//
+//		}
+//		for (int k = 0; k < n; k++) {
+//			System.out.println(data[k]);
+//		}
 
 	}
 }
